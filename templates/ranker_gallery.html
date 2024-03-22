@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ranker Gallery</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Ranker Gallery</h1>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.name }} - {{ student.marks }} marks in {{ student.course }}</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/">Go back to Home</a></p>
+</body>
+</html>
